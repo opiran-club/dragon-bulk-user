@@ -130,7 +130,7 @@ echo -ne "\033[1;32m Choose Password Option:\033[1;37m "
 
         pass=$(perl -e 'print crypt($ARGV[0], $ARGV[1])' "$password" "$password")
         useradd -M -s /bin/false -p "$pass" "$username" >/dev/null 2>&1
-        echo "$password" >/etc/OPIranPanel/senha/"$username"
+        echo "$password" >/etc/VPSManager/senha/"$username"
 
         if [[ "$active_option" == "B" ]]; then
             # Active days start after first login
